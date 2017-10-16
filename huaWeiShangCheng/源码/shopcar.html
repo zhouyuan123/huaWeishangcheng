@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的购物车</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<style type="text/css">
+			body {
+				background-color: ghostwhite;
+			}
+			
+			#asdf+img {
+				height: 100px;
+				width: 100px;
+				vertical-align: middle;
+			}
+			
+			#counts,
+			#counts1 {
+				width: 70px;
+				height: 40px;
+				outline: none;
+				float: left;
+				border: none;
+				background-color: ghostwhite;
+				text-align: center;
+				font-size: 15px;
+			}
+			
+			#counts1~button,
+			#counts~button {
+				height: 20px;
+				width: 20px;
+				float: left;
+				border: none;
+				background-color: white;
+				outline: none;
+				border: 1px solid gainsboro;
+				cursor: pointer;
+			}
+			
+			table {
+				border-collapse: separate;
+				border-spacing: 0px 20px;
+				width: 1200px;
+				margin: 0px auto;
+			}
+			
+			.everygoods span:first-of-type {
+				display: inline-block;
+				margin-left: 10px;
+				font-size: 12px !important;
+				margin-top: 20px;
+				float: left;
+			}
+			
+			.everygoods span:nth-of-type(2) {
+				font-size: 12px !important;
+				display: block;
+				float: right;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+			}
+			
+			.everygoods {
+				width: 400px;
+				height: 100px;
+				border-bottom: 1px solid gainsboro;
+				position: relative;
+			}
+			
+			table span {
+				color: #CA151E;
+			}
+			
+			#aljd {
+				display: inline-block;
+				height: 60px;
+				background-color: #CA151E;
+				line-height: 60px;
+				width: 130px;
+				text-align: center;
+				font-weight: bold;
+				color: white;
+				margin-left: 20px;
+				cursor: pointer;
+			}
+			
+			#accounts p {
+				color: #CA151E;
+				font-weight: bold;
+			}
+			
+			.delete {
+				cursor: pointer;
+				color: black;
+			}
+			
+			#zhuce_success {
+				position: fixed;
+				height: 300px;
+				width: 560px;
+				background-color: deepskyblue;
+				top: 140px;
+				left: 380px;
+				line-height: 160px;
+				font-size: 80px;
+				text-align: center;
+				color: white;
+				font-weight: 900px;
+				border-radius: 20px;
+				display: none;
+			}
+			
+			#zhuce_success span {
+				display: inline-block;
+				font-size: 40px;
+				margin: 0px 80px;
+				line-height: 40px;
+				width: 100px;
+			}
+			
+			#zhuce_success span:hover {
+				cursor: pointer;
+				color: red;
+			}
+		</style>
+
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/footer.css" />
+		<link rel="stylesheet" type="text/css" href="css/header.css" />
+	</head>
+
+	<body>
+		<header>
+			<div id="asfasdf">
+
+				<div class="page_header clearfix">
+					<ul>
+						<li>
+							<a href="">华为官网</a>&nbsp;|&nbsp;</li>
+						<li>
+							<a href="">荣耀官网</a>&nbsp;|&nbsp;</li>
+						<li>
+							<a href="">花粉俱乐部</a>&nbsp;|&nbsp;</li>
+						<li>
+							<a href="">帮助中心</a>&nbsp;|&nbsp;</li>
+						<li>
+							<a href="">V码（优购码）</a>&nbsp;|&nbsp;</li>
+						<li>
+							<a href="">select region</a>&nbsp;|&nbsp;</li>
+						<li id="gengduo">
+							<div class="s-dropdown">
+								<div class="h">
+									<a class="icon-dropdown">更多精彩▼</a>
+								</div>
+								<div class="icon-dropdownb">
+									<div class="dropdown-more">
+										<dl>
+											<dt><a href="http://emui.huawei.com/cn/" target="_blank">EMUI</a></dt>
+											<dt><a href="http://appstore.huawei.com/" target="_blank">应用市场</a></dt>
+											<dt><a href="http://cloud.huawei.com" target="_blank">云服务</a></dt>
+											<dt><a href="http://developer.huawei.com/" target="_blank">开发者联盟</a></dt>
+										</dl>
+										<div class="code">
+											<a href="https://www.vmall.com/appdownload" target="_blank">
+												<img src="https://res.vmallres.com/appdownload/home/qrcode_vmall_new_app01.png?20170221">
+											</a>
+											<p>扫一扫，
+												<a href="https://www.vmall.com/appdownload" target="_blank">下载客户端</a>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+					<ul style="float: right;">
+						<li>
+							<a href="">我的订单</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;</li>
+						<li style="position: relative;">
+							<a href="" id="gouwuche_a">购物车<span id="goods_count">0</span></a>
+							<div id="gouwu_che">
+								<div class="gouwuche_jiesuan clearfix">
+									<div class="gouwuche_jiesuan1">
+										<span>总计:</span>
+										<p>￥0</p>
+									</div>
+									<span>结算</span>
+
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<div class="">
+			<table border="0" cellspacing="0px" cellpadding="0px">
+				<tr height="40px" style="background-color: white;" align="left" id="first_tr">
+					<th width="150px"><input type="checkbox" id="" />全选</th>
+					<th width="480px" align="left">商品</th>
+					<th width="140px">单价</th>
+					<th width="140px">数量</th>
+					<th width="140px">小计</th>
+					<th width="140px">操作</th>
+				</tr>
+
+				<table border="0" cellspacing="0" cellpadding="0">
+
+					<tr align="left" height="60px" style="background-color: white; " id="accounts">
+						<td width="50px"><input type="checkbox" name="" id="as1df" checked="checked" class="asdf" />全选</td>
+						<td width="200px">
+							<a href="javascript: ;" id="delete1">删除</a>
+						</td>
+						<td align="right" width="200px">
+							<p style="display: inline-block;">总计：￥<span id="sumaccounts"></span >元</p><span id="aljd">立即结算</span></td>
+
+					</tr>
+				</table>
+
+			</table>
+
+			<div id="zhuce_success">
+				<p>确认付款?</p>
+				<span id="sure_left">付款</span><span id="sure_right">取消</span>
+			</div>
+
+			<footer>
+				<div class="footer">
+					<div class="footer_top center ">
+						<div class="foot_top_top clearfix">
+							<div class="footer_top_img1">
+							</div>
+							<span class="footer_top_wenzi"> 五百强企业 品质保证</span>
+						</div>
+						<div class="foot_top_top clearfix">
+							<div class="footer_top_img2">
+							</div>
+							<span class="footer_top_wenzi"> 7天退货 15天换货</span>
+						</div>
+						<div class="foot_top_top clearfix">
+							<div class="footer_top_img3">
+							</div>
+							<span class="footer_top_wenzi"> 48元起免运费</span>
+						</div>
+						<div class="foot_top_top clearfix">
+							<div class="footer_top_img4">
+							</div>
+							<span class="footer_top_wenzi"> 448家维修网店 全国联保</span>
+						</div>
+					</div>
+
+					<div class="footer_ul center clearfix">
+						<ul>
+							<h2>—</h2>
+							<p>购物相关</p>
+							<li>
+								<a href="">购物指南</a>
+							</li>
+							<li>
+								<a href="">配送方式</a>
+							</li>
+							<li>
+								<a href="">支付方式</a>
+							</li>
+							<li>
+								<a href="">常见问题</a>
+							</li>
+						</ul>
+						<ul>
+							<h2>—</h2>
+							<p>保修与退换货</p>
+							<li>
+								<a href="">保修政策</a>
+							</li>
+							<li>
+								<a href="">退换货政策</a>
+							</li>
+							<li>
+								<a href="">退换货流程</a>
+							</li>
+							<li>
+								<a href="">保修状态查询</a>
+							</li>
+						</ul>
+						<ul>
+							<h2>—</h2>
+							<p>维修与技术支持</p>
+							<li>
+								<a href="">售后网点</a>
+							</li>
+							<li>
+								<a href="">预约维修</a>
+							</li>
+							<li>
+								<a href="">手机寄修</a>
+							</li>
+							<li>
+								<a href="">维修配件价格查询</a>
+							</li>
+						</ul>
+						<ul>
+							<h2>—</h2>
+							<p>关于我们</p>
+							<li>
+								<a href="">公司介绍</a>
+							</li>
+							<li>
+								<a href="">华为商城简介</a>
+							</li>
+							<li>
+								<a href="">华为线下门店</a>
+							</li>
+							<li>
+								<a href="">荣耀线下门店</a>
+							</li>
+							<li>
+								<a href="">诚征英才</a>
+							</li>
+						</ul>
+						<ul>
+							<h2>—</h2>
+							<p>关于我们</p>
+							<li>
+								<a href="">新浪微博</a>
+							</li>
+							<li>
+								<a href="">腾讯微博</a>
+							</li>
+							<li>
+								<a href="">花粉俱乐部</a>
+							</li>
+						</ul>
+						<ul>
+							<h2>—</h2>
+							<p>友情链接</p>
+							<li>
+								<a href="">华为商城</a>
+							</li>
+							<li>
+								<a href="">华为手机版</a>
+							</li>
+							<li>
+								<a href="">荣耀官网</a>
+							</li>
+							<li>
+								<a href="">花粉俱乐部</a>
+							</li>
+							<li>
+								<a href="">莫塞尔商城</a>
+							</li>
+						</ul>
+						<ul>
+							<h2>—</h2>
+							<h2>400-088-6888</h2>
+							<li>24小时客服热线</li>
+						</ul>
+					</div>
+					<div class="footer_bottom">
+						<div class="foot_bottom1 ">
+							<div class="foot_bottom_img1">
+								<a href=""><img src="img/flogo.png" /></a>
+							</div>
+							<div class="foot_bottom_wenzi1">
+								<span>
+								<a href="">隐私政策</a>
+								<a href="">服务协议 </a>Copyright &copy; 2012-2017 华为软件技术有限公司 版权所有 保留一切权利<br/></span>
+								<span>
+								<a href="">公安备案</a> 苏公网安备32011402010009号 | 苏ICP备17040376号-6 | 增值电信业务经营许可证：苏B2-20130048号|<br
+							</span>
+								<span>
+								<a href="">网络文化经营许可证</a>：苏网文[2015] 1599-026号</span>
+							</div>
+							<div class="foot_bottom_right1">
+								<img src="img/20160226162415360.png" />
+								<img src="img/20160226162521265.png" />
+								<img src="img/20160226162531395.png" />
+								<img src="img/20161224180914742.jpg" />
+								<img src="img/20170725194955862.jpg" />
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</footer>
+
+			<script src="js/jquery-2.2.4.min.js"></script>
+			<script type="text/javascript" src="js/header_shopcar.js"></script>
+			<script src="js/jquery.cookie.js"></script>
+			<script src="js/shopcar.js"></script>
+			<script>
+				//购物车初始化
+				var list_cookie = $.cookie("list_cookie");
+				var count_cookie = $.cookie("count_cookie");
+				var total_cookie = $.cookie("total_cookie");
+				$(function() {
+					if(list_cookie != null) {
+						$("#gouwu_che").prepend(list_cookie);
+						$(".gouwuche_jiesuan1 p").text("￥" + total_cookie);
+						$("#goods_count").text(count_cookie);
+					}
+					for(var i = 0; i < count_cookie; i++) {
+						var imgsrc = $(".everygoods:eq(" + i + ") img").attr("src");
+						var goodsdesc = $(".everygoods:eq(" + i + ") span:first-of-type").text();
+						var price = $(".everygoods:eq(" + i + ") span:last-of-type").text();
+						var ss = '		<tr align="left" height="130px" style="background-color: white; "> '
+						ss += '		<td width="150px"><input type="checkbox" name="bbadc" id="asdf" checked="checked" /> <img src="' + imgsrc + '" /></td>'
+						ss += '		<td width="480px">' + goodsdesc + '</td>'
+						ss += '		<td width="120px"><span class="price">' + price + '</span></td>'
+						ss += '			<td width="120px"><input type="text" name="" id="counts" value="1" />'
+						ss += '			<button class = "add" > + </button><br/>'
+						ss += '			<button class = "sub" > - </button></td > '
+						ss += '			<td width="120px"><span class="sumcounts">' + price + '</span></td>'
+						ss += '			<td width="120px">'
+						ss += '			<span  class="delete">删除</span>'
+						ss += '			</td>'
+						ss += '		</tr>'
+						$("#first_tr").after(ss);
+					}
+					var sumcounts = 0;
+					for(var i = 0; i < $(".price").size(); i++) {
+						sumcounts += parseInt($(".price:eq(" + i + ")").text().substring(1));
+					};
+					$("#sumaccounts").text(sumcounts);
+					$(".delete").click(function() {
+						sumcounts -= parseInt($(this).parent().parent().find(".sumcounts").text().substring(1));
+						$("#sumaccounts").text(sumcounts);
+						$(this).parent().parent().remove();
+
+					});
+
+					$(".add").click(function() {
+						var price = 0;
+						$(".sub").css("cursor", "pointer")
+						var count = parseInt($(this).prev().attr("value"));
+						var price = parseInt($(this).parent().parent().find(".price").text().substring(1));
+						count++;
+						$(this).prev().attr("value", count);
+						$(this).parent().parent().find(".sumcounts").text("￥" + count * price);
+						sumcounts += price;
+						$("#sumaccounts").text(sumcounts);
+					});
+
+					$(".sub").click(function() {
+						var count = parseInt($(this).prev().prev().prev().attr("value"));
+						var price = parseInt($(this).parent().parent().find(".price").text().substring(1));
+						if(count == 1) {
+							$(this).css("cursor", "not-allowed");
+						} else {
+							count--;
+							$(this).prev().prev().prev().attr("value", count);
+							$(this).parent().parent().find(".sumcounts").text(count * price);
+							sumcounts -= price;
+							$("#sumaccounts").text(sumcounts);
+						}
+					});
+				});
+
+				//加减删除
+
+				//				//加减数量
+				//				//结算金额
+				//				$("#sumaccounts").text(parseInt($("#sumcounts").text()) + parseInt($("#sumcounts1").text()))
+				//				//价格
+				//				var price = parseInt($("#price").text());
+				//				var price1 = parseInt($("#price1").text());
+				//				$("#add").click(function() {
+				//					var counts = parseInt($("#counts").val()) + 1;
+				//					var $aa = $(this).parent().parent();
+				//					$("#counts").val(counts)
+				//					$("#sub").css("cursor", "pointer")
+				//					$("#sumcounts").text(counts * price)
+				//					if(isNaN(parseInt($("#sumcounts").text()))) {
+				//						$("#sumaccounts").text(parseInt($("#sumcounts1").text()))
+				//					} else if(isNaN(parseInt($("#sumcounts1").text()))) {
+				//						$("#sumaccounts").text(parseInt($("#sumcounts").text()))
+				//					} else {
+				//						$("#sumaccounts").text(parseInt($("#sumcounts").text()) + parseInt($("#sumcounts1").text()))
+				//					}
+				//
+				//				})
+				//				$("#sub").click(function() {
+				//					var counts = parseInt($("#counts").val()) - 1;
+				//					if(counts == 0) {
+				//						$(this).css("cursor", "not-allowed")
+				//					} else {
+				//						$("#counts").val(counts)
+				//						$("#sumcounts").text(counts * price)
+				//						if(isNaN(parseInt($("#sumcounts").text()))) {
+				//							$("#sumaccounts").text(parseInt($("#sumcounts1").text()))
+				//						} else if(isNaN(parseInt($("#sumcounts1").text()))) {
+				//							$("#sumaccounts").text(parseInt($("#sumcounts").text()))
+				//						} else {
+				//							$("#sumaccounts").text(parseInt($("#sumcounts").text()) + parseInt($("#sumcounts1").text()))
+				//						}
+				//
+				//					}
+				//				})
+				//				$("#add1").click(function() {
+				//
+				//					var counts = parseInt($("#counts1").val()) + 1;
+				//					$("#counts1").val(counts)
+				//					$("#sub1").css("cursor", "pointer")
+				//					$("#sumcounts1").text(counts * price1)
+				//					if(isNaN(parseInt($("#sumcounts").text()))) {
+				//						$("#sumaccounts").text(parseInt($("#sumcounts1").text()))
+				//					} else if(isNaN(parseInt($("#sumcounts1").text()))) {
+				//						$("#sumaccounts").text(parseInt($("#sumcounts").text()))
+				//					} else {
+				//						$("#sumaccounts").text(parseInt($("#sumcounts").text()) + parseInt($("#sumcounts1").text()))
+				//					}
+				//				});
+				//
+				//				$("#sub1").click(function() {
+				//					var counts = parseInt($("#counts1").val()) - 1;
+				//					if(counts == 0) {
+				//						$(this).css("cursor", "not-allowed")
+				//					} else {
+				//						$("#counts1").val(counts)
+				//						$("#sumcounts1").text(counts * price1)
+				//						if(isNaN(parseInt($("#sumcounts").text()))) {
+				//							$("#sumaccounts").text(parseInt($("#sumcounts1").text()))
+				//						} else if(isNaN(parseInt($("#sumcounts1").text()))) {
+				//							$("#sumaccounts").text(parseInt($("#sumcounts").text()))
+				//						} else {
+				//							$("#sumaccounts").text(parseInt($("#sumcounts").text()) + parseInt($("#sumcounts1").text()))
+				//						}
+				//
+				//					}
+				//				});
+
+				//				//单选删除
+				//				$(".delete").click(function() {
+				//					alert()
+				//					$(this).parent().parent().remove();
+				//					if(isNaN(parseInt($("#sumcounts").text()))) {
+				//						$("#sumaccounts").text(parseInt($("#sumcounts1").text()))
+				//					} else if(isNaN(parseInt($("#sumcounts1").text()))) {
+				//						$("#sumaccounts").text(parseInt($("#sumcounts").text()))
+				//					}
+				//					if(isNaN(parseInt($("#sumcounts").text())) && isNaN(parseInt($("#sumcounts1").text()))) {
+				//						$("#sumaccounts").text("0")
+				//
+				//					}
+				//
+				//				})
+				//全选删除
+				$("#delete1").click(function() {
+					$(".delete").parent().parent().remove();
+					$("#sumaccounts").text("0")
+				});
+
+				$("#as1df").change(function() {
+					alert($("#asdf").is(':checked'))
+					if($("#asdf").is(':checked')) {
+						$("[name=bbadc]").attr("checked", "checked");
+					} else {
+						$("[name=bbadc]").attr("checked", "checked");
+					}
+				});
+
+				$("#sure_right").mouseover(function() {
+					$(this).text("付款");
+					$("#sure_left").text("取消");
+				});
+
+				$("#sure_left").mouseover(function() {
+					$(this).text("付款");
+					$("#sure_right").text("取消");
+				});
+
+				$("#zhuce_success").click(function() {
+					$(this).text("恭喜付款成功!     " + 4 + "s后跳往首页");
+					setTimeout(function() {
+						location.assign("shouye.html")
+					}, 4000)
+
+				});
+				
+				$("#aljd").click(function(){
+					$("#zhuce_success").fadeIn();
+				})
+			</script>
+		</div>
+	</body>
+
+</html>

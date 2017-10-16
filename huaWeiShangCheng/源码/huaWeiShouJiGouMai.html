@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>华为手机购买</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/huaWeiShouJiGouMai.css" />
+		<link rel="stylesheet" type="text/css" href="css/header.css" />
+		<link rel="stylesheet" type="text/css" href="css/footer.css" />
+		<link rel="stylesheet" type="text/css" href="css/ronngyao9.css" />
+		<style>
+			body {
+				background-color: white;
+			}
+			
+			#gouwu_che {
+				background-color: white;
+				position: absolute;
+				right: 0px;
+				box-shadow: 1px 1px 17px black;
+				z-index: 100;
+				display: none;
+			}
+			
+			.element scrollbar {
+				display: none;
+			}
+			
+			.everygoods img {
+				width: 64px;
+				height: 64px;
+				margin-left: 20px;
+				margin-top: 20px;
+				float: left;
+			}
+			
+			.everygoods {
+				width: 400px;
+				height: 100px;
+				border-bottom: 1px solid gainsboro;
+				position: relative;
+			}
+			
+			.everygoods span:first-of-type {
+				display: inline-block;
+				margin-left: 10px;
+				font-size: 12px;
+				margin-top: 20px;
+				float: left;
+			}
+			
+			.everygoods span:first-of-type:hover {
+				cursor: pointer;
+				color: red;
+			}
+			
+			.everygoods span:nth-of-type(2) {
+				font-size: 12px;
+				display: block;
+				float: right;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+			}
+			
+			.gouwuche_jiesuan {
+				width: 400px;
+				height: 60px;
+			}
+			
+			.gouwuche_jiesuan p {
+				color: #CA141D;
+				font-size: 22px;
+				letter-spacing: 1px;
+				text-indent: 20px;
+			}
+			
+			.gouwuche_jiesuan1 {
+				float: left;
+				margin-left: 20px;
+			}
+			
+			.gouwuche_jiesuan>span {
+				height: 40px;
+				display: inline-block;
+				float: right;
+				width: 120px;
+				background-color: #DD2222;
+				margin-top: 10px;
+				margin-right: 30px;
+				line-height: 40px;
+				text-align: center;
+				letter-spacing: 5px;
+				color: white;
+				font-size: 15px;
+				font-family: arial;
+			}
+			
+			.gouwuche_jiesuan>span:hover {
+				background-color: #ff0000;
+				cursor: pointer;
+			}
+			
+			#goods_count {
+				display: inline-block;
+				position: absolute;
+				background-color: orangered;
+				border-radius: 50%;
+				height: 20px;
+				width: 20px;
+				text-align: center;
+				line-height: 20px;
+				color: white;
+			}
+			
+			.s-dropdown {
+				position: relative;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<div id="asfasdf">
+
+				<div class="page_header clearfix">
+					<ul>
+						<li>
+							<a href="">华为官网</a>&nbsp;|&nbsp;</li>
+						<li>
+							<a href="">荣耀官网</a>&nbsp;|&nbsp;</li>
+						<li>
+							<a href="">花粉俱乐部</a>&nbsp;|&nbsp;</li>
+						<li>
+							<a href="">帮助中心</a>&nbsp;|&nbsp;</li>
+						<li>
+							<a href="">V码（优购码）</a>&nbsp;|&nbsp;</li>
+						<li>
+							<a href="">select region</a>&nbsp;|&nbsp;</li>
+						<li id="gengduo">
+							<div class="s-dropdown">
+								<div class="h">
+									<a class="icon-dropdown">更多精彩▼</a>
+								</div>
+								<div class="icon-dropdownb">
+									<div class="dropdown-more">
+										<dl>
+											<dt><a href="http://emui.huawei.com/cn/" target="_blank">EMUI</a></dt>
+											<dt><a href="http://appstore.huawei.com/" target="_blank">应用市场</a></dt>
+											<dt><a href="http://cloud.huawei.com" target="_blank">云服务</a></dt>
+											<dt><a href="http://developer.huawei.com/" target="_blank">开发者联盟</a></dt>
+										</dl>
+										<div class="code">
+											<a href="https://www.vmall.com/appdownload" target="_blank">
+												<img src="https://res.vmallres.com/appdownload/home/qrcode_vmall_new_app01.png?20170221">
+											</a>
+											<p>扫一扫，
+												<a href="https://www.vmall.com/appdownload" target="_blank">下载客户端</a>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+					<ul style="float: right;">
+						<li>
+							<a href="">我的订单</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;</li>
+						<li style="position: relative;">
+							<a href="shopcar.html" target="_blank" id="gouwuche_a">购物车<span id="goods_count">0</span></a>
+							<div id="gouwu_che">
+								<div class="gouwuche_jiesuan clearfix">
+
+									<div class="gouwuche_jiesuan1 clearfix">
+										<span>总计:</span>
+										<p>￥0</p>
+									</div>
+									<span><a href="shopcar.html" target="_blank">结算 </a></span>
+
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<div style="height: 10px;background: linear-gradient(#EBEBEB,#FFFFFF);"></div>
+		<section>
+			<div id="gouMai">
+				<div id="gouMai_left">
+					<div id="goodsbox">
+						<img src="img/jubu_1_800_800_1488119937007mp.jpg" />
+						<div id="swep">
+
+						</div>
+
+					</div>
+					<div id="small_">
+						<div id="small">
+							<img src="img/jubu_1_800_800_1488119937007mp.jpg" />
+						</div>
+						<div id="small1">
+							<img src="img/jubu_2_00_800_1488119925729.jpg" />
+						</div>
+						<div id="small2">
+							<img src="img/jubu_3_800_800_1488119925729.jpg" />
+						</div>
+						<div id="small3">
+							<img src="img/jubu_4_800_800_1488119925729.jpg" />
+						</div>
+						<div id="small4">
+							<img src="img/jubu_5_800_800_1488119925729.jpg" />
+						</div>
+
+					</div>
+
+					<div id="review">
+						<img src="img/jubu_1_800_800_1488119937007mp.jpg" />
+					</div>
+				</div>
+
+				<div id="gouMai_right">
+					<div class="product_">
+						<h1 id="pro-name">HUAWEI P10 4GB+64GB 全网通版（曜石黑）</h1>
+
+						<span>享6期分期免息。限量赠送价值148元配件礼包，数量有限赠完即止。新一代徕卡双镜头，多彩外观设计，时尚简约。</span>
+						<div class="product-price">
+							<div class="product-price-info">
+								<span id="pro-price">¥&nbsp;3488.00</span>
+							</div>
+							<!-- 20170518-商品简介-参加活动-start -->
+							<div class="product_11">
+								<div class="product_1">
+									<ul class="clearfix" id="pro-promotions-list">
+										<li style="display: list-item;"><strong style="margin: 0 6px;"><img src="img/duihao.png"/></strong><span>支持分期</span></li>
+										<li style="display: list-item;"><strong style="margin: 0 6px;"><img src="img/duihao.png"/></strong><span>分期免息</span></li>
+										<li style="display: list-item;"><strong style="margin: 0 6px;"><img src="img/duihao.png"/></strong><span>赠送积分</span></li>
+									</ul>
+								</div>
+								<div class="product_2" style="display: none;z-index: 3;">
+									<ul>
+										<li><strong style="margin: 0 6px;"><img src="img/duihao.png"/></strong><span>支持分期</span><span style="color: #717171;">支持花呗分期支付</span></li>
+										<li><strong style="margin: 0 6px;"><img src="img/duihao.png"/></strong><span>分期免息</span><span style="color: #717171;">支持花呗分期支付免息</span></li>
+										<li><strong style="margin: 0 6px;"><img src="img/duihao.png"/></strong><span>赠送积分</span><span style="color: #717171;">购买即赠商城积分，积分可抵现~</span></li>
+									</ul>
+								</div>
+							</div>
+							<div id="pei">
+								<span style="margin-left: 0px;">配 </span>
+								<img src="img/pei155_55_1503041772698mp.jpg" title="HUAWEI P10多彩软壳（条纹图案）" />
+								<img src="img/pei255_55_1466652731221mp.jpg" title="华为自拍杆（静怡蓝）" />
+								<img src="img/pei355_55_1497323467743mp.jpg" title="天际通 1GB全球上网流量" />
+								<img src="img/pei455_55_1503041059191mp.jpg" title="HUAWEI P10手机车用保护壳（浅灰）" />
+								<p><span style="margin-left: 0px;">服务说明</span><span>已满48元已免运费</span>|<span>由华为商城负责发货，并提供售后服务</span></p>
+							</div>
+							<div style="border-bottom: 1px solid gainsboro;margin-top: 10px;">
+
+							</div>
+						</div>
+						<div class="xuanze">
+							<div class="product-choose">
+
+								<div class="product-choose-detail">
+									<p><span>选择颜色</span></p>
+									<ul>
+										<li class="">
+											<div class="sku" id="zuan">
+												<a href="javascript:;" title="钻雕金">
+													<img src="img/zuandiao40_40_1488119863052mp.jpg" alt="钻雕金">
+													<p><span>钻雕金</span></p>
+												</a>
+											</div>
+										</li>
+										<li class="">
+											<div class="sku" id="hei">
+												<a href="javascript:;" title="曜石黑">
+													<img src="https://res.vmallres.com/pimages//product/6901443170234/40_40_1488119937007mp.jpg" alt="曜石黑">
+													<p><span>曜石黑</span></p>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="product-choose-detail" id="quanWangTong">
+								<p><span>选择制式</span></p>
+								<ul>
+									<li class="">
+										<div class="sku">
+											<a href="javascript:;" title="全网通版">
+												<p><span>全网通版</span></p>
+											</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="product-choose-detail">
+								<p><span>选择容量</span></p>
+								<ul>
+									<li class="">
+										<div class="sku" id="rongLiang_64g">
+											<a href="javascript:;" title="4GB+64GB">
+												<p><span>4GB+64GB</span></p>
+											</a>
+										</div>
+									</li>
+									<li class="">
+										<div class="sku" id="rongLiang_128g">
+											<a href="javascript:;" title="4GB+128GB">
+												<p><span>4GB+128GB</span></p>
+											</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="product-choose-detail">
+								<p><span>选择套餐</span></p>
+								<ul>
+									<li class="">
+										<div class="sku">
+											<a href="javascript:;" title="官方标配">
+												<p><span>官方标配</span></p>
+											</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="product-choose-detail">
+								<p><span>选择定制</span></p>
+								<ul>
+									<li class="">
+										<div class="sku" id="wuDingZhi">
+											<a href="javascript:;" title="无定制">
+												<p><span>无定制</span></p>
+											</a>
+										</div>
+									</li>
+									<li class="">
+										<div class="sku" id="DingZhi">
+											<a href="javascript:;" title="后壳定制">
+												<p><span>后壳定制</span></p>
+											</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div id="liJiZhiFu">
+								<input type="number" name="" id="" value="1" min="0" />
+								<div>
+									<a id="jiaru_gouwuche">加入购物车</a>
+								</div>
+								<div>
+									<a>立即下单</a>
+								</div>
+							</div>
+
+							<!--选择-->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section style="height: auto;">
+			<div class="body1">
+				<div class="body1_top">
+					<span>- 推荐商品 -</span>
+				</div>
+				<div class="body1_foot">
+					<div class="body1_contain">
+						<ul>
+							<li>
+								<a href="/product/64608694.html" title="荣耀9 透明保护壳" target="_blank">
+									<img src="https://res.vmallres.com/pimages//product/6901443184033/142_142_1497319723377mp.jpg" alt="荣耀9 透明保护壳">
+									<div>
+										<p><span>荣耀9 透明保护壳</span></p>
+										<em>￥99</em>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="/product/194128141.html" title="（热门配件）荣耀体脂秤 魔秤 体重秤" target="_blank">
+									<img src="https://res.vmallres.com/pimages//product/6901443173129/142_142_1497594967609mp.jpg" alt="（热门配件）荣耀体脂秤 魔秤 体重秤">
+									<div>
+										<p><span>（热门配件）荣耀体脂秤 魔秤 体重秤</span></p>
+										<em>￥199</em>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="/product/259735704.html" title="（热门配件）荣耀 10000mAh 移动电源 9V2A快充版 充电宝 快充宝" target="_blank">
+									<img src="https://res.vmallres.com/pimages//product/6901443127030/142_142_1475025651654mp.jpg" alt="（热门配件）荣耀 10000mAh 移动电源 9V2A快充版 充电宝 快充宝">
+									<div>
+										<p><span>（热门配件）荣耀 10000mAh 移动电源</span></p>
+										<em>￥169</em>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="/product/735640556.html" title="荣耀魔声耳机" target="_blank">
+									<img src="https://res.vmallres.com/pimages//product/6901443188536/142_142_1496993545156mp.jpg" alt="荣耀魔声耳机">
+									<div>
+										<p><span>荣耀魔声耳机</span></p>
+										<em>￥249</em>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="/product/922640972.html" title="【广东电信赠费】荣耀9" target="_blank">
+									<img src="https://res.vmallres.com/pimages//product/6901443189205/142_142_1500952937405mp.jpg" alt="【广东电信赠费】荣耀9">
+									<div>
+										<p><span>【广东电信赠费】荣耀9</span></p>
+										<em>￥2299</em>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="/product/993405255.html" title="荣耀手环3" target="_blank">
+									<img src="https://res.vmallres.com/pimages//product/6901443183524/142_142_1496627594147mp.jpg" alt="荣耀手环3">
+									<div>
+										<p><span>荣耀手环3</span></p>
+										<em>￥229</em>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<a href="javascript:;" class="next1"></a>
+						<a href="javascript:;" class="prev1"></a>
+					</div>
+				</div>
+			</div>
+			<div class="hr-20">
+				<div></div>
+			</div>
+			<div class="body2">
+				<p>
+					<a href="#">商品详情</a>
+					<a href="#">规格参数</a>
+					<a href="#">包装与售后</a>
+					<a href="#">用户评价</a>
+				</p>
+			</div>
+			<div class="body3">
+				<img src="https://res.vmallres.com/pimages/temp/product/201709271458232895849.jpg" alt="CMEG证书1920x300.jpg">
+			</div>
+			<div class="body4">
+				<img src="https://res.vmallres.com/pimages/temp/product/201709151810426293482.jpg" style="">
+			</div>
+			<div class="body5">
+				<img src="https://res.vmallres.com/pimages/temp/product/201709201555479992041.jpg" alt="6大理由.jpg" title="undefined">
+			</div>
+			<div class="body6">
+				<img src="https://res.vmallres.com/pimages/temp/product/201709280925298209075.jpg" alt="1920x360.jpg">
+			</div>
+			<div class="body7">
+				<img src="https://res.vmallres.com/pimages/temp/product/201709191655144673683.jpg" style="" title="undefined" alt="1920xN-1.jpg">
+			</div>
+			<div class="body8">
+				<img src="https://res.vmallres.com/pimages/temp/product/201709051537178269605.jpg" style="">
+			</div>
+			<div class="hr_60">
+
+			</div>
+			<div class="contain1">
+				<h2 class="contain1_head">规格参数</h2>
+				<div class="hr_30"></div>
+				<div class="contain1_1">
+					<h2>主要参数</h2>
+					<ul>
+						<li>
+							<label>传播名</label>
+							<span>荣耀9</span>
+						</li>
+						<li>
+							<label>上市时间</label>
+							<span>2017年6月</span>
+						</li>
+						<li>
+							<label>CPU型号</label>
+							<span>麒麟960</span>
+						</li>
+						<li>
+							<label>CPU核数</label>
+							<span>八核 + 微智核i6</span>
+						</li>
+						<li>
+							<label>双卡</label>
+							<span>双卡双待单通，Nano SIM</span>
+						</li>
+						<li>
+							<label>4G网络制式</label>
+							<span>移动4G（TD-LTE）/联通4G（TD-LTE/LTE FDD）/电信4G（TD-LTE/LTE FDD）</span>
+						</li>
+						<li>
+							<label>屏幕尺寸</label>
+							<span>5.15英寸</span>
+						</li>
+						<li>
+							<label>屏幕色彩</label>
+							<span>1670万色</span>
+						</li>
+						<li>
+							<label>分辨率</label>
+							<span>1920×1080</span>
+						</li>
+						<li>
+							<label>运行内存（RAM）</label>
+							<span>4GB（备注：可使用的内存容量小于此值，因为手机软件占用的空间）</span>
+						</li>
+						<li>
+							<label>机身内存（ROM）</label>
+							<span>64GB（备注：可使用的内存容量小于此值，因为手机软件占用的空间）</span>
+						</li>
+						<li>
+							<label>最大支持扩展</label>
+							<span>最高支持256GB（非标配）</span>
+						</li>
+						<li>
+							<label>主摄像头</label>
+							<span>2000万像素（黑白）+1200万像素（彩色），F2.2光圈（备注：不同拍照模式的照片像素会有差异）</span>
+						</li>
+						<li>
+							<label>副摄像头</label>
+							<span>800万，F2.0光圈</span>
+						</li>
+						<li>
+							<label>电池容量</label>
+							<span>3200mAh（典型容量）/3100mAh（额定容量）；支持9V/2A充电</span>
+						</li>
+					</ul>
+				</div>
+				<div class="contain1_2">
+					<h2>主体</h2>
+					<ul>
+						<li>
+							<label>品牌</label>
+							<span>Honor</span>
+						</li>
+						<li>
+							<label>型号</label>
+							<span>STF-AL00</span>
+						</li>
+						<li>
+							<label>传播名</label>
+							<span>荣耀9</span>
+						</li>
+						<li>
+							<label>上市时间</label>
+							<span>2017年6月</span>
+						</li>
+						<li>
+							<label>外观设计</label>
+							<span>直板</span>
+						</li>
+						<li>
+							<label>智能手机</label>
+							<span>是</span>
+						</li>
+						<li>
+							<label>操作系统</label>
+							<span>华为 EMUI 5.1（兼容Android 7.0）</span>
+						</li>
+						<li>
+							<label>用户界面</label>
+							<span>华为 EMUI 5.1（兼容Android 7.0）</span>
+						</li>
+						<li>
+							<label>CPU型号</label>
+							<span>麒麟960</span>
+						</li>
+						<li>
+							<label>CPU核数</label>
+							<span>八核 + 微智核i6</span>
+						</li>
+						<li>
+							<label>CPU主频</label>
+							<span>4xCortex A73 2.4GHz + 4xCortex A53 1.8GHz</span>
+						</li>
+						<li>
+							<label>GPU</label>
+							<span>Mali G71 MP8</span>
+						</li>
+						<li>
+							<label>双卡</label>
+							<span>双卡双待单通，Nano SIM</span>
+						</li>
+						<li>
+							<label>输入方式</label>
+							<span>百度输入法华为版，华为Swype输入法，Android键盘（AOSP）</span>
+						</li>
+						<li>
+							<label>特色功能</label>
+							<span>情景智能，运动健康，语音控制，指关节手势</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="hr_70">
+
+			</div>
+			<div class="contain2">
+				<div class="contain2_1">
+					<h2>包装</h2>
+
+					<ul>
+						<li>手机 X 1</li>
+						<li>充电器 X 1</li>
+						<li>USB 线 X 1</li>
+						<li>快速指南 X 1</li>
+						<li>三包凭证 X 1</li>
+						<li>取卡针 X 1</li>
+						<li>PC保护壳 X 1</li>
+
+					</ul>
+
+				</div>
+				<div class="contain2_2">
+					<h2>售后服务</h2>
+					<ul>
+						<li>本产品全国联保，享受三包服务，质保期为：一年质保</li>
+						<li>如因质量问题或故障，凭厂商维修中心或特约维修点的质量检测证明，享受7天内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！</li>
+						<li>售后服务电话：400-830-8300</li>
+						<li>华为消费者BG官网： https://consumer.huawei.com/cn/</li>
+					</ul>
+
+				</div>
+				<div class="contain2_3">
+					<ul>
+						<li>以上页面中的产品图片及屏幕内容仅作示意，实物产品效果（包括但不限于外观、颜色、尺寸）和屏幕显示内容（包括但不限于背景、UI、配图）可能略有差异，请以实物为准。</li>
+						<li>以上页面中的数据为理论值，均来自华为内部实验室，于特定测试环境下所得（请见各项具体说明），实际使用中可能因产品个体差异、软件版本、使用条件和环境因素不同略有不同，请以实际使用的情况为准。</li>
+						<li>为提供尽可能准确的产品信息、规格参数、产品特性，华为或荣耀可能实时调整和修订以上页面中的文字表述、图片效果等内容，以求与实际产品性能、规格、指数、零部件等信息相匹配，由于产品批次和生产供应因素实时变化，如遇确有进行上述修改和调整必要的情形，恕不专门通知。</li>
+					</ul>
+				</div>
+			</div>
+			<div class="contain3">
+				<div class="contain3_1">
+					<label class="contain3_1_label1">好评度</label>
+					<div class="contain3_1_1">
+						<span>98</span>
+						<em>%</em>
+					</div>
+					<label class="contain3_1_label2">买家印象</label>
+					<div class="contain3_1_2">
+						<ul>
+							<li>高颜值 <span>43719</span></li>
+							<li>操作流畅<span>41612</span></li>
+							<li>物流快<span>34810</span></li>
+							<li>系统稳定<span>32049</span></li>
+							<li>有声有色<span>28418</span></li>
+							<li>通话清晰<span>27096</span></li>
+							<li>续航持久<span>13826</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="footer">
+				<div class="footer_top center ">
+					<div class="foot_top_top clearfix">
+						<div class="footer_top_img1">
+						</div>
+						<span class="footer_top_wenzi"> 五百强企业 品质保证</span>
+					</div>
+					<div class="foot_top_top clearfix">
+						<div class="footer_top_img2">
+						</div>
+						<span class="footer_top_wenzi"> 7天退货 15天换货</span>
+					</div>
+					<div class="foot_top_top clearfix">
+						<div class="footer_top_img3">
+						</div>
+						<span class="footer_top_wenzi"> 48元起免运费</span>
+					</div>
+					<div class="foot_top_top clearfix">
+						<div class="footer_top_img4">
+						</div>
+						<span class="footer_top_wenzi"> 448家维修网店 全国联保</span>
+					</div>
+				</div>
+
+				<div class="footer_ul center clearfix">
+					<ul>
+						<h2>—</h2>
+						<p>购物相关</p>
+						<li>
+							<a href="">购物指南</a>
+						</li>
+						<li>
+							<a href="">配送方式</a>
+						</li>
+						<li>
+							<a href="">支付方式</a>
+						</li>
+						<li>
+							<a href="">常见问题</a>
+						</li>
+					</ul>
+					<ul>
+						<h2>—</h2>
+						<p>保修与退换货</p>
+						<li>
+							<a href="">保修政策</a>
+						</li>
+						<li>
+							<a href="">退换货政策</a>
+						</li>
+						<li>
+							<a href="">退换货流程</a>
+						</li>
+						<li>
+							<a href="">保修状态查询</a>
+						</li>
+					</ul>
+					<ul>
+						<h2>—</h2>
+						<p>维修与技术支持</p>
+						<li>
+							<a href="">售后网点</a>
+						</li>
+						<li>
+							<a href="">预约维修</a>
+						</li>
+						<li>
+							<a href="">手机寄修</a>
+						</li>
+						<li>
+							<a href="">维修配件价格查询</a>
+						</li>
+					</ul>
+					<ul>
+						<h2>—</h2>
+						<p>关于我们</p>
+						<li>
+							<a href="">公司介绍</a>
+						</li>
+						<li>
+							<a href="">华为商城简介</a>
+						</li>
+						<li>
+							<a href="">华为线下门店</a>
+						</li>
+						<li>
+							<a href="">荣耀线下门店</a>
+						</li>
+						<li>
+							<a href="">诚征英才</a>
+						</li>
+					</ul>
+					<ul>
+						<h2>—</h2>
+						<p>关于我们</p>
+						<li>
+							<a href="">新浪微博</a>
+						</li>
+						<li>
+							<a href="">腾讯微博</a>
+						</li>
+						<li>
+							<a href="">花粉俱乐部</a>
+						</li>
+					</ul>
+					<ul>
+						<h2>—</h2>
+						<p>友情链接</p>
+						<li>
+							<a href="">华为商城</a>
+						</li>
+						<li>
+							<a href="">华为手机版</a>
+						</li>
+						<li>
+							<a href="">荣耀官网</a>
+						</li>
+						<li>
+							<a href="">花粉俱乐部</a>
+						</li>
+						<li>
+							<a href="">莫塞尔商城</a>
+						</li>
+					</ul>
+					<ul>
+						<h2>—</h2>
+						<h2>400-088-6888</h2>
+						<li>24小时客服热线</li>
+					</ul>
+				</div>
+				<div class="footer_bottom">
+					<div class="foot_bottom1 ">
+						<div class="foot_bottom_img1">
+							<a href=""><img src="img/flogo.png" /></a>
+						</div>
+						<div class="foot_bottom_wenzi1">
+							<span>
+								<a href="">隐私政策</a>
+								<a href="">服务协议 </a>Copyright &copy; 2012-2017 华为软件技术有限公司 版权所有 保留一切权利<br/></span>
+							<span>
+								<a href="">公安备案</a> 苏公网安备32011402010009号 | 苏ICP备17040376号-6 | 增值电信业务经营许可证：苏B2-20130048号|<br
+							</span>
+							<span>
+								<a href="">网络文化经营许可证</a>：苏网文[2015] 1599-026号</span>
+						</div>
+						<div class="foot_bottom_right1">
+							<img src="img/20160226162415360.png" />
+							<img src="img/20160226162521265.png" />
+							<img src="img/20160226162531395.png" />
+							<img src="img/20161224180914742.jpg" />
+							<img src="img/20170725194955862.jpg" />
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script type="text/javascript" src="js/jquery-2.2.4.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/header_shopcar.js" type="text/javascript">
+		</script>
+		<script type="text/javascript">
+			//头部，更多精彩
+			$(".s-dropdown").hover(function() {
+					$(".icon-dropdownb").show();
+				},
+				function() {
+					$(".icon-dropdownb").hide();
+				}
+			);
+
+			//石黑手机
+			$("#hei").click(function() {
+				$(this).css({
+					"border": "1px solid #ca141d",
+					"font-weight": "bold"
+				});
+				$("#zuan").css({
+					"border": "1px solid #6A6A6A",
+					"font-weight": "norma"
+				});
+				$(".product_ h1").text("HUAWEI P10 4GB+64GB 全网通版（曜石黑）");
+				$("#rongLiang_128g").css({
+					"border": " 1px solid #e4e4e4",
+					"color": "#E4E4E4",
+					"font-weight": "normal"
+				});
+				$("#rongLiang_128g p").css("cursor", "not-allowed");
+				$("#rongLiang_64g").css({
+					"border": "1px solid #ca141d",
+					"font-weight": "bold"
+				});
+				$("#rongLiang_64g p").css("cursor", "pointer");
+				//左边改变为石黑
+				$("#goodsbox img").attr("src", "img/jubu_1_800_800_1488119937007mp.jpg");
+				$("#small img").attr("src", "img/jubu_1_800_800_1488119937007mp.jpg");
+				$("#small1 img").attr("src", "img/jubu_2_00_800_1488119925729.jpg");
+				$("#small2 img").attr("src", "img/jubu_3_800_800_1488119925729.jpg");
+				$("#small3 img").attr("src", "img/jubu_4_800_800_1488119925729.jpg");
+				$("#small4 img").attr("src", "img/jubu_5_800_800_1488119925729.jpg");
+				$("#review img").attr("src", "img/jubu_1_800_800_1488119937007mp.jpg");
+
+				$("#small").click(function() {
+					$("#small_ div").css("outline", "none");
+					$("#small").css("outline", "#ca141d 1px solid");
+					$("#goodsbox img").attr("src", "img/jubu_1_800_800_1488119937007mp.jpg");
+					$("#review img").attr("src", "img/jubu_1_800_800_1488119937007mp.jpg");
+				});
+				$("#small1").click(function() {
+					$("#small_ div").css("outline", "none");
+					$("#small1").css("outline", "#ca141d 1px solid");
+					$("#goodsbox img").attr("src", "img/jubu_2_00_800_1488119925729.jpg");
+					$("#review img").attr("src", "img/jubu_2_00_800_1488119925729.jpg");
+				});
+				$("#small2").click(function() {
+					$("#small_ div").css("outline", "none");
+					$("#small2").css("outline", "#ca141d 1px solid");
+					$("#goodsbox img").attr("src", "img/jubu_3_800_800_1488119925729.jpg");
+					$("#review img").attr("src", "img/jubu_3_800_800_1488119925729.jpg")
+				});
+				$("#small3").click(function() {
+					$("#small_ div").css("outline", "none");
+					$("#small3").css("outline", "#ca141d 1px solid");
+					$("#goodsbox img").attr("src", "img/jubu_4_800_800_1488119925729.jpg");
+					$("#review img").attr("src", "img/jubu_4_800_800_1488119925729.jpg");
+				});
+				$("#small4").click(function() {
+					$("#small_ div").css("outline", "none");
+					$("#small4").css("outline", "#ca141d 1px solid");
+					$("#goodsbox img").attr("src", "img/jubu_5_800_800_1488119925729.jpg");
+					$("#review img").attr("src", "img/jubu_5_800_800_1488119925729.jpg");
+				})
+			});
+			//默认
+			$("#small").click(function() {
+				$("#small_ div").css("outline", "none");
+				$("#small").css("outline", "#ca141d 1px solid");
+				$("#goodsbox img").attr("src", "img/jubu_1_800_800_1488119937007mp.jpg");
+				$("#review img").attr("src", "img/jubu_1_800_800_1488119937007mp.jpg");
+			});
+			$("#small1").click(function() {
+				$("#small_ div").css("outline", "none");
+				$("#small1").css("outline", "#ca141d 1px solid");
+				$("#goodsbox img").attr("src", "img/jubu_2_00_800_1488119925729.jpg");
+				$("#review img").attr("src", "img/jubu_2_00_800_1488119925729.jpg");
+			});
+			$("#small2").click(function() {
+				$("#small_ div").css("outline", "none");
+				$("#small2").css("outline", "#ca141d 1px solid");
+				$("#goodsbox img").attr("src", "img/jubu_3_800_800_1488119925729.jpg");
+				$("#review img").attr("src", "img/jubu_3_800_800_1488119925729.jpg")
+			});
+			$("#small3").click(function() {
+				$("#small_ div").css("outline", "none");
+				$("#small3").css("outline", "#ca141d 1px solid");
+				$("#goodsbox img").attr("src", "img/jubu_4_800_800_1488119925729.jpg");
+				$("#review img").attr("src", "img/jubu_4_800_800_1488119925729.jpg");
+			});
+			$("#small4").click(function() {
+				$("#small_ div").css("outline", "none");
+				$("#small4").css("outline", "#ca141d 1px solid");
+				$("#goodsbox img").attr("src", "img/jubu_5_800_800_1488119925729.jpg");
+				$("#review img").attr("src", "img/jubu_5_800_800_1488119925729.jpg");
+			})
+			//钻雕金手机
+			$("#zuan").click(function() {
+				$(this).css({
+					"border": "1px solid #ca141d",
+					"font-weight": "bold"
+				});
+				$("#hei").css({
+					"border": "1px solid #6A6A6A",
+					"font-weight": "normal"
+				});
+				$(".product_ h1").text("HUAWEI P10 4GB+128GB 全网通版（钻雕金）");
+				$("#rongLiang_64g").css({
+					"border": " 1px solid #e4e4e4",
+					"color": "#E4E4E4",
+					"font-weight": "normal"
+				});
+				$("#rongLiang_64g p").css("cursor", "not-allowed");
+				$("#rongLiang_128g").css({
+					"border": "1px solid #ca141d",
+					"font-weight": "bold"
+				});
+				$("#rongLiang_128g p").css("cursor", "pointer");
+				//左边变为钻雕金
+				$("#goodsbox img").attr("src", "img/zuan5800_800_1488119863052mp.jpg");
+				$("#small img").attr("src", "img/zuan5800_800_1488119863052mp.jpg");
+				$("#small1 img").attr("src", "img/zuan4800_800_1488119852394.jpg");
+				$("#small2 img").attr("src", "img/zuan3800_800_1488119854599.jpg");
+				$("#small3 img").attr("src", "img/zuan2800_800_1488119855344.jpg");
+				$("#small4 img").attr("src", "img/zuan1800_800_1488119856028.jpg");
+				$("#review img").attr("src", "img/zuan5800_800_1488119863052mp.jpg");
+
+				$("#small").click(function() {
+					$("#small_ div").css("outline", "none");
+					$("#small").css("outline", "#ca141d 1px solid");
+					$("#goodsbox img").attr("src", "img/zuan5800_800_1488119863052mp.jpg");
+					$("#review img").attr("src", "img/zuan5800_800_1488119863052mp.jpg");
+				});
+				$("#small1").click(function() {
+					$("#small_ div").css("outline", "none");
+					$("#small1").css("outline", "#ca141d 1px solid");
+					$("#goodsbox img").attr("src", "img/zuan4800_800_1488119852394.jpg");
+					$("#review img").attr("src", "img/zuan4800_800_1488119852394.jpg");
+				});
+				$("#small2").click(function() {
+					$("#small_ div").css("outline", "none");
+					$("#small2").css("outline", "#ca141d 1px solid");
+					$("#goodsbox img").attr("src", "img/zuan3800_800_1488119854599.jpg");
+					$("#review img").attr("src", "img/zuan3800_800_1488119854599.jpg")
+				});
+				$("#small3").click(function() {
+					$("#small_ div").css("outline", "none");
+					$("#small3").css("outline", "#ca141d 1px solid");
+					$("#goodsbox img").attr("src", "img/zuan2800_800_1488119855344.jpg");
+					$("#review img").attr("src", "img/zuan2800_800_1488119855344.jpg");
+				});
+				$("#small4").click(function() {
+					$("#small_ div").css("outline", "none");
+					$("#small4").css("outline", "#ca141d 1px solid");
+					$("#goodsbox img").attr("src", "img/zuan1800_800_1488119856028.jpg");
+					$("#review img").attr("src", "img/zuan1800_800_1488119856028.jpg");
+				});
+			});
+
+			//支付分期
+			$(".product_11").hover(function() {
+					$(".product_2").show();
+					$(".product_2").mouseover(function() {
+						$(".product_2").show();
+					});
+				},
+				function() {
+					$(".product_2").hide();
+				}
+			);
+			//j局部放大
+			var b = $(function() {
+				$("#goodsbox").mousemove(function(event) {
+					var $sweep = $(this).find("#swep")
+					//获得left位置
+					var left = event.pageX - $sweep.height() / 2 - $(this).offset().left;
+					//获得right位置
+					var top = event.pageY - $sweep.height() / 2 - $(this).offset().top;
+					//扫描框移动
+					$("#review img").css({
+						"left": -left,
+						"top": -top,
+					})
+					$sweep.css({
+						"left": left,
+						"top": top,
+					});
+				}).hover(function() {
+						$(this).find("#swep").show();
+						$("#review").show()
+					},
+					function() {
+						$(this).find("#swep").hide();
+						$("#review").hide()
+					});
+			});
+			//购物车
+			var list_cookie = $.cookie("list_cookie");
+			var count_cookie = $.cookie("count_cookie");
+			var total_cookie = $.cookie("total_cookie");
+			$(function() {
+				if(list_cookie != null) {
+					$("#gouwu_che").prepend(list_cookie);
+					$(".gouwuche_jiesuan1 p").text("￥" + total_cookie);
+					$("#goods_count").text(count_cookie);
+				}
+			});
+
+			// 加入购物车
+			$("#jiaru_gouwuche").click(function() {
+				var msg = $("#pro-name").text();
+				var src = $("#goodsbox img").attr("src");
+				var aaa = '<div class="everygoods clearfix"> '
+				aaa += '	<img src="' + src + '" />'
+				aaa += '		<span>' + msg + '</span>'
+				aaa += '		<span>￥3488</span>'
+				aaa += '	</div>'
+				$("#gouwu_che").prepend(aaa);
+				//				total += 3488;
+				var total = parseInt($(".gouwuche_jiesuan1 p").text().substring(1));
+				total += 3488;
+				$(".gouwuche_jiesuan1 p").text("￥" + total);
+				count_cookie++;
+				$("#goods_count").text(count_cookie);
+				list_cookie += aaa;
+				$.cookie("list_cookie", list_cookie);
+				$.cookie("total_cookie", total);
+				$.cookie("count_cookie", count_cookie);
+			});
+
+			//加入购物车动画
+			var left = $('#goods_count').css("left");
+			var top1 = $('#goods_count').css("top");
+			$(".shopcar").click(function() {
+				$('#goods_count').animate({
+					"left": "-100px",
+					"top": "100px",
+					"font-size": "40px",
+					"height": "40px",
+					"width": "40px",
+					"line-height": "40px",
+					"background-color": "red"
+				}, 10, function() {
+					$('#goods_count').animate({
+						"left": left,
+						"top": top1,
+						"font-size": "8px",
+						"height": "16px",
+						"width": "16px",
+						"line-height": "16px",
+						"background-color": "orangered"
+					}, 1000)
+				});
+			});
+		</script>
+	</body>
+
+</html>

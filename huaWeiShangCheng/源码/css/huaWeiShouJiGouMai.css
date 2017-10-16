@@ -1,0 +1,375 @@
+/*公共样式*/
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font: 12px "微软雅黑" arial;
+	color: #555555;
+	/*background-color: #F5F5F5;*/
+}
+
+ul {
+	color: #555555;
+	list-style: none;
+}
+
+a {
+	color: #555555;
+	text-decoration: none;
+}
+
+.clearfix:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+
+/**布局居中*/
+
+.center {
+	width: 1200px;
+	margin: 0px auto;
+}
+
+img {
+	vertical-align: middle;
+	border: none;
+	text-align: center;
+}
+
+/*具体样式*/
+
+/*headertop*/
+header{
+	height: 100px;
+	/*border: solid cadetblue 1px;*/
+	
+}
+#maiShouJihead{
+	height: 100px;
+	/*border: solid cadetblue 1px;*/
+	width: 1200px;
+	margin: 0 auto;
+}
+#headerTOP a{
+	font-size: 13px;
+    color: #717171;;
+}
+#headerTOP a:hover{
+	text-decoration:none;
+	color:#900;
+}
+.headertop_left{
+	height: 30px;
+	width:800px;
+	/*outline: red 1px solid;*/
+	float: left;
+	
+}
+.headertop_left li{
+	float: left;
+	padding-right: 20px;
+}
+
+.headertop_left_right{
+	height: 30px;
+	width: 300px;
+	float: right;
+	
+}
+.headertop_left_right li{
+	float: right;
+	padding-right: 30px;
+	
+}
+.s-dropdown{
+	position: relative;
+	cursor: pointer;
+}
+.icon-dropdownb{
+	display: none;
+	padding-top: 10px;
+	right: 0px;
+	position: absolute;
+	z-index: 2;
+	background-color: white;
+	width: 160px;
+
+	text-align: center;
+}
+.dropdown-more dl dt{
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 32px;
+}
+.code p{
+	margin-top: 12px;
+}
+section{
+	height: 750px;
+	/*outline: blue 1px solid;*/
+}
+#gouMai{
+	/*outline: cyan 1px solid;*/
+	height: 750px;
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+#gouMai_left{
+	/*outline: yellow 1px solid;*/
+	height: 720px;
+	width: 500px;
+	float: left;
+	margin-top: 30px;
+}
+/*局部放大*/
+#goodsbox {
+	width: 498px;
+	height: 498px;
+	/*border: solid 1px #555;*/
+	overflow: hidden;
+	position: relative;
+	/*margin-left: 200px;
+	margin-top: 400px;*/
+}
+#goodsbox:hover{
+	cursor:move;
+}
+#goodsbox>img {
+	width: 100%;
+}
+
+#goodsbox #swep{
+	width: 150px;
+	height: 150px;
+	background: darkgray;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+	display: none;
+}
+#review{
+	position:absolute;
+	height: 600px;
+	width: 600px;
+	overflow: hidden;
+	margin-top:-550px;
+	margin-left: 550px;
+	display: none;
+	border: 2px solid #E2E2E2;
+	z-index: 5;
+	background-color: white;
+}
+#review img{
+	position: absolute;
+	width: 800px;
+}
+#small_{
+	/*outline: solid 1px gray;*/
+	height: 60px;
+	width: 360px;
+	margin: 18px auto;
+
+}
+#small_ img{
+	display: inline-block;
+	height: 55px;
+	
+}
+#small_ div{
+	margin-right: 12px;
+}
+#small{
+	outline: solid 1px red;
+}
+#small,#small1,#small3,#small2,#small4{
+	height: 55px;
+	width: 55px;
+	float: left;
+	margin: 5px;
+}
+#gouMai_right{
+	position: relative;
+	/*outline: yellow 2px solid;*/
+	height: 720px;
+	width: 660px;
+	float: left;
+	margin-top: 30px;
+	padding-left: 40px;
+}
+.product_{
+	height: 120px;
+	width: 660px;
+	/*outline: 1px solid blue;*/
+	border-bottom: 1px solid gainsboro;
+}
+#gouMai_right .product_ h1{
+	font-size: 28px;
+    max-height: 84px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: #3a3a3a;
+}
+.product_ span{	
+	height: 23px;
+	line-height: 34px;
+	color: #3a3a3a;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+#pro-price{
+	color: #ca141d;
+    font-size: 18px;
+   
+}
+.product-price-info{
+	float: left;
+}
+.product_1 li{
+	float: left;
+	height: 45px;
+	margin-left: 15px;
+	cursor: pointer;
+}
+.product_2{
+	position: absolute;
+	height: 110px;
+	width: 490px;
+	box-shadow: 0 0 10px gray;
+	top:121px;
+	left: 140px;
+	padding-left: 20px;
+	z-index: 5;
+	background-color: white;
+}
+
+.product_2 ul span{
+	margin-right: 50px;
+}
+#pei img{
+	height: 36px;
+	margin:10px;
+}
+#pei span{
+	margin:0 15px;
+}
+.xuanze{
+	height: 500px;
+	width: 660px;
+	/*outline: 1px solid saddlebrown;*/
+}
+.product-choose-detail{
+	/*outline: #101010 1px solid;*/
+	height: 60px;
+	width: 550px;
+	float: left;
+
+	margin-bottom: 10px;
+}
+.product-choose li/*,.product-choose ul*/,.product-choose p{
+	float: left;
+	
+}
+.product-choose-detail .sku{
+	width: 150px;
+	height: 45px;
+	line-height: 45px;
+	
+	border: 1px solid #ca141d;
+    font-weight: bold;
+	margin:5px 10px 0 0;
+	
+}
+.product-choose-detail img{
+	float: left;
+	height: 35px;
+	padding-top: 5px;
+}
+.product-choose-detail li{
+	float: left;
+}
+.product-choose-detail>p{
+	float: left;
+	margin:13px 30px 0 0;
+}
+.sku p{
+	text-align: center;
+}
+.sku#zuan p,.sku#hei p{
+	float: right;
+	margin-top: -2px;
+	margin-right: 30px;
+}
+#zuan{
+	border: solid #6A6A6A 1px;
+    font-weight: normal;
+}
+#rongLiang_128g,#DingZhi{
+	border: 1px solid #e4e4e4;
+    color: #E4E4E4;
+    font-weight: normal;
+   
+}
+  #rongLiang_128g p,#DingZhi p{
+  	 cursor: not-allowed;
+  }
+  #liJiZhiFu{
+  	height: 120px;
+  	width: 600px;
+  /*	outline: 1px burlywood solid;*/
+  	position: absolute;
+  	bottom: 20px;
+  	left: 40px;
+  } 
+  #liJiZhiFu input{
+  	
+  	text-align: center;
+  	display: block;
+  	height: 46px;
+  	width: 65px;
+  	
+  	line-height: 55px;
+  	margin:31px 0;
+  	float: left;
+  	font-size: 23px;
+  }
+#liJiZhiFu div{
+	height: 50px;
+	width: 170px;
+	/*outline: 1px solid darkblue;*/
+	float: left;
+	margin: 31px 0 0 35px;
+	font-size: 18px;
+	text-align: center;
+	padding: auto auto;
+	line-height: 50px;
+}
+#liJiZhiFu div:hover{
+	opacity: 0.8;
+	cursor: pointer;
+}
+#liJiZhiFu div:first-of-type{
+	background-color:#fc600c;
+}
+#liJiZhiFu div:last-child{
+	background-color:#ca151d;
+	
+}
+#liJiZhiFu div a{
+	
+	color: #FFFFFF;
+	font-size: 18px;
+	
+}

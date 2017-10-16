@@ -1,0 +1,133 @@
+	.top {
+		width: 1350px;
+		height: 50px;
+		background-image: url(../img/380a4278-2269-45e7-9d2a-bb248fbdbf81.jpg);
+		background-repeat: no-repeat;
+		background-position: -300px 0;
+		
+	}
+	
+	.head {
+		height: 50px;
+		width: 1200px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.head ul li{
+		list-style: none;
+		float: right;
+		line-height: 50px;
+		font-size: 16px;
+		
+		margin: 0 20px;
+	}
+	.head ul li a:hover{
+		color: #EC971F;
+		
+	}
+/*-------------------*/
+.nav{
+	width:1350px ;
+	height: 560px;
+	background-image: url(../img/59ed9a3e-ce72-4d8b-914e-bb26fda76289.jpg);
+	background-position: -300px 0;
+}
+.nav .p10plus{
+	/*display: inline-block;*/
+	height: 560px;
+	width: 450px;
+	
+	float: left;
+}
+.nav .p10{
+	/*display: inline-block;*/
+	height: 560px;
+	width: 900px;
+	float: left;
+	
+}
+/*-================*/
+.nav1{
+	width:1350px ;
+	height: 560px;
+	background-image: url(../img/aca56ef4-88f4-4c25-97e0-879b4a09639b.jpg);
+	background-position: -300px 0;
+}
+.nav1 .p10plus{
+	/*display: inline-block;*/
+	height: 560px;
+	width: 450px;
+	
+	float: left;
+}
+.nav1 .p10{
+	/*display: inline-block;*/
+	height: 560px;
+	width: 900px;
+	float: left;
+	
+}
+/*===============================*/
+.nav2{
+	width:1350px ;
+	height: 560px;
+	background-image: url(../img/c7d08405-4d0b-4dcf-a0c3-bcff60d9fb62.jpg);
+	background-position: -300px 0;
+}
+.nav2 .p10plus{
+	/*display: inline-block;*/
+	height: 560px;
+	width: 450px;
+	
+	float: left;
+}
+.nav2 .p10{
+	/*display: inline-block;*/
+	height: 560px;
+	width: 900px;
+	float: left;
+	
+}
+.nav_a{
+	width: 1350px;
+	height: 164px;
+	background-image: url(../img/30a0bd69-8da5-4724-9f52-d797c4035533.jpg);
+	background-position: -300px 0;
+}
+.nav_a a{
+	display: inline-block;
+	width: 1350px;
+	height: 164px;
+}
+/*1111111111111111111111111111111111*/
+.set{
+	width: 1350px;
+	height: 500px;
+	background-image: url(../img/1f67e885-e4fe-42f9-acdc-d0280aeb84fb.jpg);
+	background-position: -300px 0;
+}
+.set .set_img{
+	width: 1000px;
+	height: 500px;
+	
+	display: inline-block;
+	margin: 0 175px;
+}
+ .set_2{
+	width: 1350px;
+	height: 220px;
+	margin-top: 20px;
+}
+.set_2 .set_2_img{
+	display: inline-block;
+	width: 1000px;
+	height: 220px;
+	margin: 0 175px;
+	background: url(../img/66bae5f2-09e1-43bf-afed-e2d5611233a0.jpg) no-repeat;
+}
+.foot{
+	width: 1350px;
+	height: 230px;
+	background: url(../img/4617b5ef-b44c-43ea-b50d-d5b1b21811d6.jpg) no-repeat;
+	background-position: -300px 0;
+}
